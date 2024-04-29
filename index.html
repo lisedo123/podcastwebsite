@@ -383,19 +383,15 @@
           </div>
 
           <form action="" class="card-form" data-form>
-            <input type="email" name="email_address" placeholder="Email Address" required class="input-field"
-              data-input>
+            <input type="text" id="contactinfo" name="email_address" placeholder="Email Address or Phone Number" required class="input-field" data-input>
 
-            <button type="submit" class="btn btn-primary" disabled data-submit>Subscribe</button>
+            <button type="submit" id="contactinfobtn" class="btn btn-primary" disabled data-submit>Subscribe</button>
           </form>
-
         </div>
       </section>
 
     </article>
   </main>
-
-
 
   <!-- FOOTER -->
 
@@ -428,7 +424,7 @@
           </li>
 
           <li>
-            <a href="tel:+2252429258" class="footer-link">2252429258</a>
+            <a href="tel:+2253021805" class="footer-link">225-302-1805</a>
           </li>
 
           <!-- <li>
@@ -490,25 +486,55 @@
     
   </footer>
 
-
-
-
-
   <!-- GO TO TOP -->
 
   <a href="#top" class="go-top" data-go-top>
     <ion-icon name="chevron-up-outline"></ion-icon>
   </a>
 
-
-
-
   <!-- custom js link -->
   <script src="script.js"></script>
   <!-- ionicon link -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </body>
 
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+  import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-database.js";
+
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+  apiKey: "AIzaSyB-4F8K8dIOTx3IFp0bJLXjbCe_w5nG83o",
+  authDomain: "contactinfo-776f9.firebaseapp.com",
+  projectId: "contactinfo-776f9",
+  storageBucket: "contactinfo-776f9.appspot.com",
+  messagingSenderId: "86469330406",
+  appId: "1:86469330406:web:7f0d466b9e01c7e5aec227"
+};
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+
+  // get ref to database services
+  const db = getDatabase(app);
+
+
+  document.getElementById("contactinfobtn").addEventListener('click', function(e){
+      e.preventDefault();
+      set(ref(db, 'contactinfo/' + document.getElementById("contactinfo").value),
+      {
+        ContactInfo: document.getElementById("contactinfo").value,
+        Email: document.getElementById("contactinfo").value
+      });
+        alert("Thank You For Subscribing");
+      });
+      function isValidEmail(email) {
+    // Regular expression for email validation
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+</script>
 </html>

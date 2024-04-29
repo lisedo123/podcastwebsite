@@ -13,7 +13,7 @@
 
   /* FONT */
 
-  --ff-josefin: 'Salsa', cursive;
+  --ff-josefin: "Quicksand", sans-serif;
 
   --fs-1: 25px;
   --fs-2: 18px;
@@ -508,11 +508,12 @@ input {
   color: var(--heliotrope-gray);
   font-size: var(--fs-4);
   width: max-content;
+  transition: .3s ease;
 }
 
-/* .footer-link:is(:hover, :focus) { 
+.footer-link:is(:hover, :focus) { 
   color: var(--blue-ryb); 
-} */
+}
 
 .social-title {
   background: var(--gradient);
