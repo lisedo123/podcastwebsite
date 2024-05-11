@@ -3,7 +3,7 @@
 
   --flourescent-blue: hsl(178, 100%, 49%);
   --heliotrope-gray: hsl(253, 15%, 70%);
-  --russian-violet: #05234b;
+  /* --russian-violet: #05234b; */
   --dark-violet: #00204a;
   --space-cadet: #00192e;
   --blue-ryb: hsl(221, 100%, 50%);
@@ -45,9 +45,9 @@ html {
   scroll-behavior: smooth;
   cursor: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMyAwbDE4IDE1aC0xMS4wODFsLTYuOTE5IDl6Ii8+PC9zdmc+), auto;
 }
-
 body {
   background: var(--dark-violet);
+  /* background: #f9f9f9; */
   color: var(--white);
 }
 
@@ -71,25 +71,20 @@ button {
   background: none;
   border: none;
 }
-
 ::-webkit-scrollbar { 
   width: 10px;
 }
-
 ::-webkit-scrollbar-track {
   background: var(--dark-violet);
   border-left: 2px solid var(--space-cadet);
 }
-
 ::-webkit-scrollbar-thumb { 
   background: #ffff;
   border-radius: 10px;
 }
-
 ::-webkit-scrollbar-thumb:hover { 
   background: hsla(204, 100%, 94%, 0.6);
 }
-
 .btn {
   color: var(--white);
   font-size: var(--fs-4);
@@ -100,7 +95,6 @@ button {
   padding: 9px 10px;
   border-radius: 6px;
 }
-
 .btn-primary {
   background: var(--gradient);
   background-size: 500%;
@@ -109,29 +103,23 @@ button {
   gap: 8px;
   transition: background var(--transition);
 }
-
 .btn-primary:is(:hover, :focus) { 
   background-position: left; 
 }
-
 .btn-primary > ion-icon { 
   font-size: 18px; 
 }
-
 .btn-primary > span { 
   margin-top: 3px; 
 }
-
 .container { 
   padding: 0 30px; 
 }
-
 img {
   overflow-clip-margin: content-box;
   overflow: clip;
   width: 200px;
 }
-
 .h3 {
   color: var(--white);
   font-size: var(--fs-2);
@@ -263,6 +251,7 @@ header .container {
 }
 
 .hero-text {
+  /* color: #333; */
   color: var(--white);
   font-size: var(--fs-4);
   line-height: 1.8;
@@ -481,7 +470,7 @@ input {
 
 .footer-brand,
 .footer-brand .logo { 
-  margin-bottom: 25px; 
+  margin-bottom: 25px;
 }
 
 .footer-text {
@@ -595,9 +584,12 @@ input {
   --blue-ryb: hsl(221, 100%, 40%); 
 }
 
+.nocopy{
+  display: none;
+}
+
 
   /* #RESPONSIVE */
-
 
 /* LARGER THAN 550px */
 
